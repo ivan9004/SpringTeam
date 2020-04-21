@@ -19,7 +19,7 @@ public class IndexController {
 	public String inicio() {
 		return "index";
 	}
-
+//Se añade un cometario a la clase IndexController
 	 @RequestMapping("/report")
 	    public String verReporte(Model model,
 	            @RequestParam(
