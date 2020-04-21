@@ -13,6 +13,9 @@
 
 	<spring:url value="/user/list" var="listURL" />
 	<a href="${listURL }">Ir a usuarios</a>
+	<br><br>
+	<spring:url value="/auto/listAuto" var="listAuto"></spring:url>
+	<a href="${listAuto }">Ver autos</a>
 	<div>
 	
 	<spring:url value="/report" var="reportLink" />
