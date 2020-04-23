@@ -34,4 +34,6 @@ public class CompraServiceImpl implements CompraService{
 		return compraDao.findCompra(idCompra);
 	}
 
+
+
 }

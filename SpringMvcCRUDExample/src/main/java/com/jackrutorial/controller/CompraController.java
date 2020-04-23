@@ -58,15 +58,18 @@ public class CompraController {
 
 		while (i.hasNext()) {
 			Autos autos = i.next();
-			// System.out.println(autos.getIdAuto()+" "+autos.getNombreAuto());
 			autoMap.put(autos.getIdAuto(), autos.getNombreAuto());
 		}
+		
+		double total = compra.getPaInicial() - compra.getRest();
 
 		model.addObject("userMap", user.getNombre() + " " + user.getApellidos());
 
 		model.addObject("autoMap", autoMap);
 
 		model.addObject("formCompra", compra);
+		
+		model.addObject("total",total);
 
 		return model;
 	}

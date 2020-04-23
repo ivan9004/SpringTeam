@@ -21,7 +21,7 @@
 			</tr>
 			<tr>
 				<td>Auto</td>
-				<td><form:select path="idAuto" items="${autoMap }"/></td>
+				<td><form:select path="idAuto" items="${autoMap }" multiple="true" disabled="true"/></td>
 			</tr>
 			<tr>
 				<td>Pago inicial</td>
@@ -32,8 +32,8 @@
 				<td><form:input path="rest" disabled="true"/></td>
 			</tr>
 			<tr>
-				<td>Fecha</td>
-				<td><form:input path="fecha" /></td>
+				<td>Total</td>
+				<td>${total }</td>
 			</tr>
 			<tr>
 				<td>Aceptar</td>

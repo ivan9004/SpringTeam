@@ -92,6 +92,5 @@ public class CompraDaoImpl implements CompraDao{
 		return jdbc.queryForObject(sql, getSqlParameterByModel(new Compra(id)), new CompraMapper());
 	}
 
-	
 
 }

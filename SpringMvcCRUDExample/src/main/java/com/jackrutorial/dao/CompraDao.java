@@ -11,6 +11,5 @@ public interface CompraDao {
 	public void addCompra(Compra compra);
 
 	public Compra findCompra(int idCompra);
-	
 
 }
