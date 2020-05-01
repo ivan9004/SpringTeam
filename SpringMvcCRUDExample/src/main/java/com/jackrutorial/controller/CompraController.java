@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jackrutorial.model.Autos;
 import com.jackrutorial.model.Compra;
-import com.jackrutorial.model.User;
+import com.jackrutorial.model.UserInfo;
 import com.jackrutorial.service.AutosService;
 import com.jackrutorial.service.CompraService;
 import com.jackrutorial.service.UserService;
@@ -48,7 +48,7 @@ public class CompraController {
 
 		Compra compra = compraService.findCompra(id);
 
-		User user = userService.findUserById(id);
+		UserInfo user = userService.findUserById(id);
 
 		List list = autoService.listAllAutos();
 

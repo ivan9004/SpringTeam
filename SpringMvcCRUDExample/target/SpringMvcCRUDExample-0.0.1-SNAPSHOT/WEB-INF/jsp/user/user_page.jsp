@@ -16,25 +16,29 @@
 	<table width="100%" border="1">
 		<tr>
 			<th>ID</th>
+			<th>Usuario</th>
 			<th>Nombre</th>
 			<th>Apellidos</th>
 			<th>Email</th>
 			<th>Pass</th>
 			<th>Direccion</th>
 			<th>Telefono</th>
-			<th>edad</th>
+			<th>Edad</th>
+			<th>Role</th>
 			<th colspan="3">Accion</th>
 		</tr>
 		<c:forEach items="${listUser }" var="user">
 			<tr>
 				<td>${user.id }</td>
+				<td>${user.username }</td>
 				<td>${user.nombre }</td>
 				<td>${user.apellidos }</td>
 				<td>${user.email }</td>
-				<td>${user.pass }</td>
+				<td>${user.password }</td>
 				<td>${user.direccion }</td>
 				<td>${user.telefono }</td>
 				<td>${user.edad }</td>
+				<td>${user.role }</td>
 				<td>
 					<spring:url value="/user/update/${user.id}" var="updateURL"/>
 					<a href="${updateURL }">Actualizar</a>

@@ -11,9 +11,10 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
-import com.jackrutorial.model.User;
+import com.jackrutorial.model.UserInfo;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -49,40 +50,45 @@ public class UserDaoImpl implements UserDao {
 		return list;
 	}
 
-	private SqlParameterSource getSqlParameterByModel(User user) {
+	private SqlParameterSource getSqlParameterByModel(UserInfo user) {
 		MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		if (user != null) {
 			parameterSource.addValue("id", user.getId());
+			parameterSource.addValue("username", user.getUsername());
 			parameterSource.addValue("nombre", user.getNombre());
 			parameterSource.addValue("apellidos", user.getApellidos());
 			parameterSource.addValue("email", user.getEmail());
-			parameterSource.addValue("pass", user.getPass());
+			parameterSource.addValue("password", encoder.encode(user.getPassword()));
 			parameterSource.addValue("direccion", user.getDireccion());
 			parameterSource.addValue("telefono", user.getTelefono());
 			parameterSource.addValue("edad", user.getEdad());
+			parameterSource.addValue("role", user.getRole());
 		}
 		return parameterSource;
 	}
 
-	private static final class UserMapper implements RowMapper<User> {
+	private static final class UserMapper implements RowMapper<UserInfo> {
 
-		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-			User user = new User();
+		public UserInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
+			UserInfo user = new UserInfo();
 			user.setId(rs.getInt("id"));
+			user.setUsername(rs.getString("username"));
 			user.setNombre(rs.getString("Nombre"));
 			user.setApellidos(rs.getString("apellidos"));
 			user.setEmail(rs.getString("email"));
-			user.setPass(rs.getString("pass"));
+			user.setPassword(rs.getString("password"));
 			user.setDireccion(rs.getString("direccion"));
 			user.setTelefono(rs.getString("telefono"));
 			user.setEdad(rs.getInt("edad"));
+			user.setRole(rs.getString("role"));
 
 			return user;
 		}
 
 	}
 
-	public void addUser(User user) {
+	public void addUser(UserInfo user) {
 
 		UserDaoImpl usuarioProp = new UserDaoImpl();
 
@@ -91,7 +97,7 @@ public class UserDaoImpl implements UserDao {
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(user));
 	}
 
-	public void updateUser(User user) {
+	public void updateUser(UserInfo user) {
 		UserDaoImpl usuarioProp = new UserDaoImpl();
 
 		String sql = usuarioProp.loadProperties().getProperty("actualizarUsuarios");
@@ -104,15 +110,18 @@ public class UserDaoImpl implements UserDao {
 
 		String sql = usuarioProp.loadProperties().getProperty("borrarUsuarios");
 
-		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(new User(id)));
+		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(new UserInfo(id)));
 	}
 
-	public User findUserById(int id) {
+	public UserInfo findUserById(int id) {
 		UserDaoImpl usuarioProp = new UserDaoImpl();
 
 		String sql = usuarioProp.loadProperties().getProperty("buscarUsuario");
 
-		return namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(new User(id)), new UserMapper());
+		return namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(new UserInfo(id)), new UserMapper());
 	}
+
+
+
 
 }

@@ -21,7 +21,6 @@ import org.springframework.web.servlet.view.jasperreports.JasperReportsViewResol
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.jackrutorial" })
 public class WebConfig extends WebMvcConfigurerAdapter {
-
 	@Autowired
 	DataSource dataSource;
 

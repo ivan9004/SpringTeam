@@ -23,12 +23,16 @@
 				<td><form:input path="apellidos" /></td>
 			</tr>
 			<tr>
+				<td>Nombre de usuario</td>
+				<td><form:input path="username" /></td>
+			</tr>
+			<tr>
 				<td>E-Mail</td>
 				<td><form:input path="email" /></td>
 			</tr>
 			<tr>
 				<td>Contraseña</td>
-				<td><form:password path="pass" /></td>
+				<td><form:password path="password" /></td>
 			</tr>
 			<tr>
 				<td>Direccion</td>

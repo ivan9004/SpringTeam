@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jackrutorial.model.User;
+import com.jackrutorial.model.UserInfo;
 import com.jackrutorial.service.UserService;
 
 @Controller
@@ -34,7 +34,7 @@ public class UserController {
 	public ModelAndView add() {
 		ModelAndView model = new ModelAndView("user/user_form");
 
-		User user = new User();
+		UserInfo user = new UserInfo();
 		model.addObject("userForm", user);
 
 		return model;
@@ -44,14 +44,14 @@ public class UserController {
 	public ModelAndView update(@PathVariable("id") int id) {
 		ModelAndView model = new ModelAndView("user/user_form");
 
-		User user = userService.findUserById(id);
+		UserInfo user = userService.findUserById(id);
 		model.addObject("userForm", user);
 
 		return model;
 	}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public ModelAndView save(@ModelAttribute("userForm") User user) {
+	public ModelAndView save(@ModelAttribute("userForm") UserInfo user) {
 		if (user != null && user.getId() != 0) {
 			userService.updateUser(user);
 		} else {

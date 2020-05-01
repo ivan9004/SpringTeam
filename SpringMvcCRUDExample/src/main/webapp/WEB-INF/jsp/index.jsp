@@ -13,18 +13,28 @@
 
 	<spring:url value="/user/list" var="listURL" />
 	<a href="${listURL }">Ir a usuarios</a>
-	<br><br>
+	<br>
+	<br>
 	<spring:url value="/auto/listAuto" var="listAuto"></spring:url>
-	<a href="${listAuto }">Ver autos</a>
-	<div>
+	<a href="${listAuto }">Ver autos</a><br><br><br>
 	
-	<spring:url value="/report" var="reportLink" />
+	Hola: ${user.username}
+	
+	
+	<div>
+
+		<spring:url value="/index/report" var="reportLink" />
 
 		<a href="${reportLink}">Ver compras en formato PDF</a> <br /> <a
 			href="${reportLink}?format=xls">Ver compras en XLS</a><br /> <a
 			href="${reportLink}?format=csv">Ver compras en CSV</a><br />
 
 	</div>
+
+	<form action="<%=request.getContextPath()%>/appLogout" method="POST">
+		<input type="submit" value="Logout" /> <input type="hidden"
+			name="${_csrf.parameterName}" value="${_csrf.token}" />
+	</form>
 
 </body>
 </html>
