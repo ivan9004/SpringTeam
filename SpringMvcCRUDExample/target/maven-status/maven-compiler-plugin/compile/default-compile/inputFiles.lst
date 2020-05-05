@@ -2,6 +2,7 @@ C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\CompraServiceImpl.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\ReporteCompraService.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\model\UserInfo.java
+C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\controller\DefaultController.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\dao\InicioDao.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\model\Autos.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\CompraService.java
@@ -29,5 +30,6 @@ C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\config\SecurityConfig.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria\test\Security.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\AutosService.java
+C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\controller\AutosRestController.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\AutosServiceImpl.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\dao\ReporteCompraDao.java

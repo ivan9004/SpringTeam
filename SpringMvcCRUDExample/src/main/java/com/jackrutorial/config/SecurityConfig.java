@@ -26,8 +26,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		http.csrf().disable();
 		
 		http.authorizeRequests()
+		.antMatchers("/customLogin.jsp").permitAll()
 		.antMatchers("/index/**").hasRole("ADMIN")
 		.antMatchers("/userRole/**").hasRole("USER")
 		.and().formLogin()  //login configuration
@@ -35,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .loginProcessingUrl("/appLogin")
         .usernameParameter("app_username")
         .passwordParameter("app_password")
-        .defaultSuccessUrl("/index/admin")	
+        .defaultSuccessUrl("/dafult/defaultAuth")
 		.and().logout()    //logout configuration
 		.logoutUrl("/appLogout") 
 		.logoutSuccessUrl("/customLogin.jsp")

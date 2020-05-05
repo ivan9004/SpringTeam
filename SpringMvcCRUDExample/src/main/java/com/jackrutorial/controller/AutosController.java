@@ -63,4 +63,6 @@ public class AutosController {
 		autosService.deleteAutos(idAuto);
 		return new ModelAndView("redirect:/auto/listAuto");
 	}
+	
+	
 }

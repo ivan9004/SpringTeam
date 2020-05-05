@@ -1,3 +1,4 @@
+com\jackrutorial\controller\AutosRestController.class
 com\jackrutorial\service\ReporteCompraService.class
 com\jackrutorial\config\SecurityInitializer.class
 com\jackrutorial\dao\InicioDao$UserMapper.class
@@ -6,6 +7,7 @@ com\jackrutorial\service\CompraService.class
 com\jackrutorial\model\ReportCompra.class
 com\jackrutorial\dao\ReporteCompraDaoImpl$CompraMapper.class
 com\jackrutoria\test\Security.class
+com\jackrutorial\controller\DefaultController.class
 com\jackrutorial\dao\InicioDao$1.class
 com\jackrutorial\controller\IndexController.class
 com\jackrutorial\dao\AutosDaoImpl$AutosMapper.class
