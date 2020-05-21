@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -44,12 +45,16 @@
 				<button type="button"
 					onclick="document.getElementById('id01').style.display='none'"
 					class="cancelbtn">Cancelar</button>
+
+				<spring:url value="/user/add" var="addURL" />
+				<a href="${addURL }">Registrarse</a>
 			</div>
 		</form>
 	</div>
 
 	<button onclick="document.getElementById('id01').style.display='block'"
 		style="width: auto;">Entrar</button>
+
 
 	<footer> Empresas de transport Grupo huejutla todos los
 		derechos recerbados </footer>

@@ -1,32 +1,17 @@
 package com.jackrutoria.test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.util.Iterator;
-import java.util.List;
-
-import com.jackrutorial.dao.AutosDaoImpl;
+import org.apache.log4j.Logger;
 
 public class Test {
-	
+
 	public static void main(String[] args) {
+		final Logger logger = Logger.getLogger(Test.class);
 		
-		String jdbcUrl="jdbc:mysql://localhost:3306/usuarios?useSSL=false";
-		String usuario="root";
-		String contra="";
-		
-		try {
-			System.out.println("Intentando conectar " +  jdbcUrl);
-			Connection miConexion = DriverManager.getConnection(jdbcUrl, usuario, contra);
-			
-			
-			System.out.println("Conexion exitosa");
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+		logger.debug("Esta es una prueba debug: "+ "parameter/exception oject");
+		logger.info("Este es con info:"+ "parameter/exception oject");
+		logger.warn("Este es con warn:  "+ "parameter/exception oject");
+		logger.error("Este es con error:  "+ "parameter/exception oject");
+		logger.fatal("Este es con fatal: "+ "parameter/exception oject");
 	}
-	
 
 }

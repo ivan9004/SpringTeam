@@ -54,6 +54,7 @@ public class UserDaoImpl implements UserDao {
 		MapSqlParameterSource parameterSource = new MapSqlParameterSource();
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		if (user != null) {
+			
 			parameterSource.addValue("id", user.getId());
 			parameterSource.addValue("username", user.getUsername());
 			parameterSource.addValue("nombre", user.getNombre());
