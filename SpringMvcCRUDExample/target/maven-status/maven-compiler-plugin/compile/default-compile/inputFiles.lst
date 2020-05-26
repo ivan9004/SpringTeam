@@ -1,6 +1,7 @@
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\model\ReportCompra.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\CompraServiceImpl.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\service\ReporteCompraService.java
+C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria\ws\CalculadoraImpl.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\model\UserInfo.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\controller\DefaultController.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\dao\InicioDao.java
@@ -22,10 +23,12 @@ C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\dao\UserDao.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\model\Compra.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\config\WebConfig.java
+C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria\ws\Calculadora.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\config\SecurityInitializer.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\controller\UserController.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\dao\CompraDao.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\controller\IndexUserController.java
+C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria\test\CalculadoraPublish.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\dao\InicioSecionReq.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutorial\config\SecurityConfig.java
 C:\Users\ivanm\git\SpringTeam\SpringMvcCRUDExample\src\main\java\com\jackrutoria\test\Security.java
