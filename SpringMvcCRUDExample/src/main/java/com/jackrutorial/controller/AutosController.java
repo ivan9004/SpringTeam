@@ -13,9 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jackrutorial.model.Autos;
 import com.jackrutorial.service.AutosService;
 
-
-
-//Hola git
 @Controller
 @RequestMapping(value = "/auto")
 public class AutosController {
