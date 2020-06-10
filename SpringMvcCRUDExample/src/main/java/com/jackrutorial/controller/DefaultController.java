@@ -13,7 +13,7 @@ public class DefaultController {
 	public String defaultAuth(HttpServletRequest request) {
 		System.out.println("Si entro");
 		if (request.isUserInRole("ROLE_ADMIN")) {
-			return "redirect:/index/admin";
+			return "redirect:/index/admin"; 
 		}
 		return "redirect:/userRole/user";
 	}
