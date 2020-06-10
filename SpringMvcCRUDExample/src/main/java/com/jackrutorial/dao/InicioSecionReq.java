@@ -23,7 +23,6 @@ public class InicioSecionReq implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		UserInfo user = inicioDao.getActiveUser(username);
-		System.out.println("Este es el inicio de InicioSecionReq"+user.getPassword());
 		GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
 		UserDetails userDetails = (UserDetails) new User(user.getUsername(), user.getPassword(),Arrays.asList(authority));
 		return userDetails;
