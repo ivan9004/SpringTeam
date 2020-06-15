@@ -103,7 +103,7 @@ public class JasperREport {
 			Transport.send(msg);
 			logger.info("Mensaje enviado");
 			jasperViewer.setVisible(true);
-
+ 
 			logger.info("Mensaje enviado");
 		} catch (Exception e) {
 			logger.error(e.getMessage());
